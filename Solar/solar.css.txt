@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+   background-color: black;
+
+}
+span{
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+}
+.sun{
+    width: 60px;
+    height: 60px;
+    background: #ff8b17;
+    box-shadow: 0 0 10px #ff8b17;
+    z-index: 9999;
+}
+.planet{
+    background: transparent;
+    border: 1px dashed white;
+    animation: animate 10s linear infinite;
+}
+@keyframes animate{
+0%{
+    transform: translate(-50%,-50%) rotate(0);
+}
+    100%{
+        transform: translate(-50%,-50%) rotate(360deg);
+    }
+}
+
+.mercury{
+    width: 110px;
+    height: 110px;
+}
+.venus{
+    width: 160px;
+    height: 160px;
+}
+.earth{
+    width: 220px;
+    height: 220px;
+}
+.mars{
+    width: 270px;
+    height: 270px;
+}
+.jupiter{
+    width: 340px;
+    height: 340px;
+}
+.saturn{
+    width: 430px;
+    height: 430px;
+}
+.uranius{
+    width: 500px;
+    height: 500px;
+}
+.neptune{
+    width: 560px;
+    height: 560px;
+}
+span::before,span::after{
+    content: '';
+    position: absolute;
+    background: #fff;
+    border-radius: 50%;
+}
+.mercury::before{
+    width: 20px;
+    height: 20px;
+    bottom: 6px;
+    left: 2px;
+    background: grey;
+}
+.venus::before{
+    width: 25px;
+    height: 25px;
+    top: 10px;
+    left: 10px;
+    background-image: linear-gradient(yellow,white);
+}
+.earth::before{
+    width: 30px;
+    height: 30px;
+    top: 100px;
+    left: -15px;
+    background-image: linear-gradient(blue,white);
+}
+.mars::before{
+    width: 30px;
+    height: 30px;
+    top:22px;
+    left: 210px;
+    background-image: linear-gradient(rgb(163, 49, 49),grey);
+}
+.jupiter::before{
+    width: 40px;
+    height: 40px;
+    bottom: -18px;
+    left: 170px;
+    background-image: linear-gradient(white,orange,brown,red);
+}
+.saturn::before{
+    width: 50px;
+    height: 50px;
+    top: 100px;
+    left: -7px;
+    background: rgb(125, 125, 11);
+}
+.saturn::after{
+    width: 80px;
+    height: 20px;
+    top: 115px;
+    left: -21px;
+    background-image: linear-gradient(rgb(174, 174, 24),white);
+}
+.uranius::before{
+    width: 37px;
+    height: 37px;
+    bottom: 80px;
+    right: 30px;
+    background-image: linear-gradient(blue,green);
+}
+.neptune::before{
+    width: 41px;
+    height: 41px;
+    top: 5px;
+    right: 140px;
+    background: darkblue;
+}
